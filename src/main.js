@@ -7,17 +7,20 @@ import router from './router'
 // import 'echarts/lib/echarts'
 // import VueECharts from 'vue-echarts'
 // Vue.component('v-chart', VueECharts)
+
 // 引入VueSocketIO
-import VueSocketIO from 'vue-socket.io'
-Vue.use(new VueSocketIO({
-  debug: process.env.NODE_ENV !== 'production',
-  connection: '/'
-}))
-
+// import VueSocketIO from 'vue-socket.io'
+// Vue.use(new VueSocketIO({
+//   debug: process.env.NODE_ENV !== 'production',
+//   connection: '/'
+// }))
+import anime from 'animejs'
 import echart from 'echarts'
+import '@/style/normalize.css'
 Vue.prototype.$echart = echart
-Vue.config.productionTip = false
+Vue.prototype.$anime = anime
 
+Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
